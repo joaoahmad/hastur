@@ -1,0 +1,21 @@
+.exceptionWrap{
+    composes: blankPanel from '../styles.css';
+    display: flex;
+    align-items: center;
+}
+
+.exceptionIcon{
+    font-size: 1.6rem;
+    margin-right: 10px;
+    opacity: 0.33;
+}
+
+.exceptionMessage{
+    font-size: 1.4rem;
+    opacity: 0.4;
+}
+
+
+.exceptionChildren{
+
+}

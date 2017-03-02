@@ -1,0 +1,97 @@
+.text{
+    display: block;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0;
+    white-space: pre-line;
+
+    &.text--center,  /* deprecated */
+    &.text--align-center{
+        text-align: center;
+    }
+
+    &.text--align-right{
+        text-align: right;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.text--muted, .text--muted a{
+    color: rgba(0,0,0, .5);
+}
+
+.text--red, .text--red a{
+    color: #e73a4a;
+}
+
+.text--green, .text--green a{
+    color: #30cc67;
+}
+
+.text--small{
+    font-size: 1.2rem;
+}
+
+.text--medium{
+    font-size: 1.6rem;
+}
+
+.text--strong{
+    font-weight: 600;
+}
+
+.text--italic{
+    font-style: italic;
+}
+
+.text--margin-bottom{
+    margin-bottom: 6px;
+}
+
+.text--margin-small-bottom{
+    margin-bottom: 4px;
+}
+
+.text--margin-large-bottom{
+    margin-bottom: 10px;
+}
+
+.text--margin-top{
+    margin-top: 6px;
+}
+
+.text--margin-small-top{
+    margin-top: 4px;
+}
+
+.text--margin-large-top{
+    margin-top: 10px;
+}
+
+.text--nowrap{
+    white-space: nowrap;
+}
+
+.text--truncate{
+    composes: text--nowrap;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 50px;
+        background-image: linear-gradient(90deg, transparent, #fff);
+    }
+}

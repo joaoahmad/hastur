@@ -1,0 +1,227 @@
+$black: #212121;
+$dark: #313540;
+$primary: #2398FF;
+$complementary: #2f3490;
+$red: #f33a5a;
+$yellow: yellow;
+$blue: #2398FF;
+
+.icon{
+    composes: icon from '../Icon/styles.css';
+}
+
+.button{
+    border-radius: 2px;
+    font-weight: 700;
+    border: solid 1px transparent;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0 16px;
+    height: 36px;
+    background: #e3e3e7;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    .icon{
+        margin-right: 20px;
+    }
+
+    &.small{
+        padding: 0 10px;
+        height: 28px;
+    }
+
+    &.wide{
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    &.full-width{
+        width: 100%;
+    }
+    &.full-height{
+        height: 100%;
+    }
+    &.no-transform{
+        text-transform: none;
+    }
+    &.no-border{
+        border-color: transparent !important;
+    }
+    &.color-white{
+        color: #fff !important;
+    }
+    &.color-black{
+        color: $black !important;
+    }
+    &.color-dark{
+        color: $dark !important;
+    }
+    &.color-red{
+        color: $red !important;
+    }
+    &.rounded{
+        border-radius: 4px;
+    }
+    &.circular{
+        border-radius: 20px;
+    }
+    &.dashed{
+        border-style: dashed;
+    }
+}
+
+.primary{
+    $blue1: #0eaaff;
+    $blue2: #0e9dff;
+    $border: #059fff;
+
+    composes: button;
+    background-color: #0ea2ff;
+    background-image: linear-gradient($blue1, $blue2);
+    border-color: $border;
+    color: #fff;
+
+    &:hover:not(.disabled), &:active, &:focus{
+        background-color: color($blue1 b(5%));
+        background-image: linear-gradient(color($blue1 b(2%)), color($blue2 b(5%)));
+        border-color: color($border b(%5));
+    }
+
+    &[disabled]{
+        background: color($primary s(-20%));
+        border-color: color($primary s(-20%));
+    }
+}
+
+.dark{
+    composes: button;
+    background-color: $dark;
+    border-color: $dark;
+    color: #fff;
+
+    &:hover:not(.disabled), &:active, &:focus{
+        background-color: color($dark b(2%));
+        border-color: color($dark b(2%));
+    }
+}
+
+.new{
+    composes: button;
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover:not(.disabled), &:active, &:focus{
+        background-color: color($blue b(2%));
+        border-color: color($blue b(2%));
+    }
+}
+
+.red{
+    composes: button;
+    color: #fff;
+    background-color: #f33a5a;
+    background-image: linear-gradient(#f33a5a, #e22647);
+    border-color: #e22647;
+
+    &:hover:not(.disabled), &:active, &:focus{
+        background-color: #e63251;
+        background-image: linear-gradient(#e63251, #d62141);
+        border-color: #d62141;
+    }
+
+    &.disabled{
+        background-color: #e67389;
+        background-image: linear-gradient(#e67389, #e06b81);
+        border-color: #dc6077;
+    }
+}
+
+.blank{
+    composes: button;
+    color: #848484;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.white{
+    composes: button;
+    color: #000;
+    background-color: #fff;
+    border-color: #e9e9e9;
+}
+
+.basic{
+    composes: button;
+    background-color: #fff;
+    border-color: #d6d6d6;
+    color: #848484;
+    //transition: box-shadow .077s;
+
+    &:hover:not(.disabled){
+        box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    }
+
+    &.toggle{
+        background: #b5bbbf;
+        color: #fff;
+        border-color: #9ba1a5;
+        box-shadow: inset 0 1px 0px rgba(0,0,0,.05);
+    }
+
+    &.disabled{
+        background: #e9e9e9 !important;
+        border-color: transparent !important;
+    }
+}
+
+.submit{
+    composes: button;
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
+    padding: 0 20px;
+    font-size: 11px;
+    line-height: 38px;
+    text-transform: uppercase;
+    border: none;
+
+    &:hover:not(.disabled), &:active, &:focus{
+        color: #fff;
+        background-color: color($blue b(2%));
+        border-color: color($blue b(2%));
+    }
+
+    &.disabled{
+        background: #A5AEB9 !important;
+    }
+}
+
+.loadingIcon{
+    margin-right: 6px;
+
+    .wide &{
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+}
+
+
+.buttonGroup{
+    display: flex;
+    align-items: center;
+
+    .button{
+        margin: 0;
+        &:first-child{
+            /*border-rad*/
+        }
+    }
+}

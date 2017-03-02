@@ -1,0 +1,129 @@
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition: .33s;
+    outline: 0;
+    z-index: 1050;
+
+    &--large{
+        .modalContentWrap{
+            max-width: 600px;
+        }
+    }
+
+    &--small{
+        .modalContentWrap{
+            max-width: 400px;
+        }
+    }
+}
+
+.modalContentWrap{
+    position: relative;
+    position: relative;
+    top: -50px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background: #fff;
+    box-shadow: -1px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    z-index: 1060;
+}
+
+.modalBody{
+    /*padding: 20px;*/
+}
+.modalFooter{
+    border-top: solid 1px #f1f1f1;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--space-between{
+        justify-content: space-between;
+    }
+}
+
+.closeButton{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    z-index: 200;
+    cursor: pointer;
+    overflow: hidden;
+    color: #c4c4c4;
+    font-size: 17px;
+
+    &:hover{
+        color: #9a9a9a;
+    }
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.modalTransition{
+    &-enter{
+        .background{
+            opacity: 0;
+        }
+        .modalContentWrap{
+            opacity: 0;
+            transform: translate3d(0,-50px,0);
+        }
+
+        &.modalTransition-enter-active{
+            .background{
+                opacity: 1;
+                transition: .17s ease-out;
+                transform: translate3d(0,0,0);
+            }
+            .modalContentWrap{
+                opacity: 1;
+                transition: .17s ease-out;
+                transform: translate3d(0,0,0);
+            }
+        }
+    }
+    &-leave{
+        .background{
+            opacity: 1;
+        }
+        .modalContentWrap{
+            opacity: 1;
+        }
+
+        &.modalTransition-leave-active{
+            .background{
+                opacity: 0;
+            }
+            .modalContentWrap{
+                opacity: 0;
+            }
+        }
+    }
+}

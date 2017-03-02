@@ -1,0 +1,14 @@
+.affix{
+
+
+    &.is-fixed{
+    }
+}
+
+
+.affix.is-fixed .affixNode{
+    position: fixed;
+    z-index: 10;
+}
+
+.affixContainer{}

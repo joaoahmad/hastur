@@ -1,0 +1,31 @@
+.table{
+
+}
+
+.body{
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
+}
+
+.item-transition{
+    &-enter{
+        opacity: 0.01;
+    }
+
+    &-enter-active{
+        opacity: 1;
+        transition: opacity .2s ease-out;
+    }
+
+    &-leave{
+        opacity: 1;
+    }
+
+    &-leave-active{
+        opacity: 0.01;
+        transition: opacity .1s ease-out;
+    }
+}
+
+.transitionGroup{
+    display: block;
+}

@@ -1,0 +1,34 @@
+.dot{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    margin: 0 5px;
+}
+
+.dot--medium{
+    width: 12px;
+    height: 12px;
+}
+
+.dot--large{
+    width: 16px;
+    height: 16px;
+}
+
+.dot--green{
+    background: #6ed01c
+}
+
+.dot--orange{
+    background: #f3be19;
+}
+
+.dot--red{
+    background: #ff2f6e;
+}
+
+.dot--blue{
+    background: #0ea4ff;
+}

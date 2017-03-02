@@ -1,0 +1,79 @@
+$width: 75px;
+$height: 22px;
+$onColor: #1f93ff;
+
+.toggle__wrap{
+
+}
+
+.toggle {
+    background-color: #e9ebee;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: bold;
+    height: $height;
+    overflow: hidden;
+    position: relative;
+    width: $width;
+
+    &.is-on{
+        border-color: $onColor;
+
+        label{
+            background: $onColor;
+        }
+    }
+}
+.toggle > input {
+    opacity: 0;
+    visibility: hidden;
+}
+.toggle > input:checked + label {
+    left: 0;
+}
+.toggle label {
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    height: 100%;
+    left: -38px;
+    line-height: 23px;
+    position: absolute;
+    top: 0;
+    transition: 0.12s;
+    -webkit-user-select: none;
+    width: 200%;
+    max-width: none;
+    overflow: auto;
+    z-index: 1;
+}
+.switcher {
+    position: relative;
+    display: flex;
+    border: 0;
+    height: 100%;
+    width: 38px;
+    flex: 0 0 38px;
+    border-radius: 3px;
+    background-color: #f6f7f9;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    z-index: 2;
+}
+.switchLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    flex: 0 0 37px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    color: #4a4a4b;
+}
+.switchOn {
+    color: #fff;
+}
+.switchOff {
+    /*color: #4a4a4b;*/
+}

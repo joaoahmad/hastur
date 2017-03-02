@@ -1,0 +1,33 @@
+.input{
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    border: solid 1px #e3e3e7;
+    padding: 7px 11px;
+    background: none;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    appearance: none;
+    outline: none;
+    transition: border-color .1s;
+}
+
+.input[disabled]{
+    background-color: #e9ebee;
+    border-color: #dddfe2;
+    color: #4b4f56;
+}
+
+.wrap{
+    width: 100%;
+}
+
+.wrapHasError .input{
+    border-color: #ff789d;
+}
+
+.errorMessage{
+    position: absolute;
+    font-size: 10px;
+    color: #d0114f;
+}

@@ -1,0 +1,36 @@
+.item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #fff;
+
+    &:not(:last-child){
+        border-bottom: solid 1px #f1f1f1;
+    }
+
+    &--light-gray{
+        background: #f1f1f3;
+    }
+
+    &--deleted{
+        background: #e4e4e8 !important;
+        border-bottom-color: #dcd9d9 !important;
+    }
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+.actions{
+    display: flex;
+    margin-left: auto;
+}

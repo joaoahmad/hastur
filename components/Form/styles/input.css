@@ -1,0 +1,84 @@
+.input{
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    border: solid 1px #e3e3e7;
+    padding: 7px 11px;
+    background: none;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    appearance: none;
+    outline: none;
+    transition: border-color .1s;
+
+    .is-focus{
+    }
+
+    &--minimal{
+        .input{
+            padding-left: 0;
+        }
+
+        &.addonWrap{
+            border-bottom: solid 1px #e8e9e9;
+            .input, .inputAddon{
+                border: 0;
+            }
+        }
+    }
+
+    &--color-red{
+        .input, .inputAddon{
+            color: #e73a4a;
+        }
+    }
+}
+
+.input[disabled]{
+    background-color: #e9ebee;
+    border-color: #dddfe2;
+    color: #4b4f56;
+}
+
+.wrap{
+    width: 100%;
+    position: relative;
+}
+
+.wrapHasError .input{
+    border-color: #ff789d;
+}
+
+.errorMessage{
+    position: absolute;
+    font-size: 10px;
+    color: #d0114f;
+}
+
+.addonWrap{
+    display: flex;
+
+    .input{
+        border-left: 0;
+        padding-left: 0;
+    }
+}
+
+.inputAddon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7E8084;
+    font-size: 1.4rem;
+    border: solid 1px #e3e3e7;
+    border-right: 0;
+    padding: 0 11px;
+}
+
+.is-disabled{
+    .inputAddon{
+        background-color: #e9ebee;
+        border-color: #dddfe2;
+        color: #4b4f56;
+    }
+}
