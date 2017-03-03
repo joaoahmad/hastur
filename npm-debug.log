@@ -1,45 +1,119 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'https://github.com/joaoahmad/hastur',
+1 verbose cli   '-S' ]
 2 info using npm@3.10.8
 3 info using node@v6.9.1
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info lifecycle hastur@0.0.1~prestart: hastur@0.0.1
-6 silly lifecycle hastur@0.0.1~prestart: no script for prestart, continuing
-7 info lifecycle hastur@0.0.1~start: hastur@0.0.1
-8 verbose lifecycle hastur@0.0.1~start: unsafe-perm in lifecycle true
-9 verbose lifecycle hastur@0.0.1~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/joao/www/hastur/node_modules/.bin:/home/joao/bin:/home/joao/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle hastur@0.0.1~start: CWD: /home/joao/www/hastur
-11 silly lifecycle hastur@0.0.1~start: Args: [ '-c', 'nodemon docs/server.js & npm run build' ]
-12 silly lifecycle hastur@0.0.1~start: Returned: code: 1  signal: null
-13 info lifecycle hastur@0.0.1~start: Failed to exec start script
-14 verbose stack Error: hastur@0.0.1 start: `nodemon docs/server.js & npm run build`
-14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-15 verbose pkgid hastur@0.0.1
-16 verbose cwd /home/joao/www/hastur
-17 error Linux 4.4.0-64-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
-19 error node v6.9.1
-20 error npm  v3.10.8
-21 error code ELIFECYCLE
-22 error hastur@0.0.1 start: `nodemon docs/server.js & npm run build`
-22 error Exit status 1
-23 error Failed at the hastur@0.0.1 start script 'nodemon docs/server.js & npm run build'.
-23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the hastur package,
-23 error not with npm itself.
-23 error Tell the author that this fails on your system:
-23 error     nodemon docs/server.js & npm run build
-23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs hastur
-23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls hastur
-23 error There is likely additional logging output above.
-24 verbose exit [ 1, true ]
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData https://github.com/joaoahmad/hastur
+8 silly fetchOtherPackageData https://github.com/joaoahmad/hastur
+9 silly cache add args [ 'https://github.com/joaoahmad/hastur', null ]
+10 verbose cache add spec https://github.com/joaoahmad/hastur
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'https://github.com/joaoahmad/hastur',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'https://github.com/joaoahmad/hastur',
+11 silly cache add   spec: 'git+https://github.com/joaoahmad/hastur.git',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:joaoahmad/hastur.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/joaoahmad/hastur.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/joaoahmad/hastur.git',
+11 silly cache add      gitUrl: 'git://github.com/joaoahmad/hastur.git',
+11 silly cache add      shortcut: 'github:joaoahmad/hastur',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/joaoahmad/hastur/master/package.json' } }
+12 verbose addRemoteGit caching https://github.com/joaoahmad/hastur
+13 verbose addRemoteGit git+https://github.com/joaoahmad/hastur.git is a repository hosted by github
+14 silly tryClone cloning git+https://github.com/joaoahmad/hastur.git via git+https://github.com/joaoahmad/hastur.git
+15 verbose tryClone git-https-github-com-joaoahmad-hastur-git-b4772df0 not in flight; caching
+16 verbose correctMkdir /home/joao/.npm/_git-remotes correctMkdir not in flight; initializing
+17 info git [ 'config', '--get', 'remote.origin.url' ]
+18 silly validateExistingRemote git+https://github.com/joaoahmad/hastur.git remote.origin.url: https://github.com/joaoahmad/hastur.git
+19 verbose validateExistingRemote git+https://github.com/joaoahmad/hastur.git is updating existing cached remote /home/joao/.npm/_git-remotes/git-https-github-com-joaoahmad-hastur-git-b4772df0
+20 info git [ 'fetch', '-a', 'origin' ]
+21 verbose updateRemote git fetch -a origin (https://github.com/joaoahmad/hastur.git)
+22 verbose correctMkdir /home/joao/.npm/_git-remotes correctMkdir not in flight; initializing
+23 verbose setPermissions git+https://github.com/joaoahmad/hastur.git set permissions on /home/joao/.npm/_git-remotes/git-https-github-com-joaoahmad-hastur-git-b4772df0
+24 verbose resolveHead git+https://github.com/joaoahmad/hastur.git original treeish: master
+25 info git [ 'rev-list', '-n1', 'master' ]
+26 silly resolveHead git+https://github.com/joaoahmad/hastur.git resolved treeish: 3a83314b28bf801d253c921856f767381a228667
+27 verbose resolveHead git+https://github.com/joaoahmad/hastur.git resolved Git URL: git+https://github.com/joaoahmad/hastur.git#3a83314b28bf801d253c921856f767381a228667
+28 silly resolveHead Git working directory: /tmp/npm-29739-7ef6ea40/git-cache-28e3c4b8/3a83314b28bf801d253c921856f767381a228667
+29 info git [ 'clone',
+29 info git   '/home/joao/.npm/_git-remotes/git-https-github-com-joaoahmad-hastur-git-b4772df0',
+29 info git   '/tmp/npm-29739-7ef6ea40/git-cache-28e3c4b8/3a83314b28bf801d253c921856f767381a228667' ]
+30 verbose cloneResolved git+https://github.com/joaoahmad/hastur.git clone Cloning into '/tmp/npm-29739-7ef6ea40/git-cache-28e3c4b8/3a83314b28bf801d253c921856f767381a228667'...
+30 verbose cloneResolved done.
+31 info git [ 'checkout', '3a83314b28bf801d253c921856f767381a228667' ]
+32 verbose checkoutTreeish git+https://github.com/joaoahmad/hastur.git checkout Note: checking out '3a83314b28bf801d253c921856f767381a228667'.
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+32 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+32 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+32 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish   git checkout -b <new-branch-name>
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish HEAD is now at 3a83314... update
+33 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
+34 verbose updateSubmodules git+https://github.com/joaoahmad/hastur.git submodule update
+35 verbose addLocalDirectory /home/joao/.npm/hastur/0.0.1/package.tgz not in flight; packing
+36 verbose correctMkdir /home/joao/.npm correctMkdir not in flight; initializing
+37 verbose tar pack [ '/home/joao/.npm/hastur/0.0.1/package.tgz',
+37 verbose tar pack   '/tmp/npm-29739-7ef6ea40/git-cache-28e3c4b8/3a83314b28bf801d253c921856f767381a228667' ]
+38 verbose tarball /home/joao/.npm/hastur/0.0.1/package.tgz
+39 verbose folder /tmp/npm-29739-7ef6ea40/git-cache-28e3c4b8/3a83314b28bf801d253c921856f767381a228667
+40 verbose addLocalTarball adding from inside cache /home/joao/.npm/hastur/0.0.1/package.tgz
+41 verbose correctMkdir /home/joao/.npm correctMkdir not in flight; initializing
+42 verbose addRemoteGit data._from: git+https://github.com/joaoahmad/hastur.git
+43 verbose addRemoteGit data._resolved: git+https://github.com/joaoahmad/hastur.git#3a83314b28bf801d253c921856f767381a228667
+44 silly cache afterAdd hastur@0.0.1
+45 verbose afterAdd /home/joao/.npm/hastur/0.0.1/package/package.json not in flight; writing
+46 verbose correctMkdir /home/joao/.npm correctMkdir not in flight; initializing
+47 verbose afterAdd /home/joao/.npm/hastur/0.0.1/package/package.json written
+48 silly install normalizeTree
+49 silly loadCurrentTree Finishing
+50 silly loadIdealTree Starting
+51 silly install loadIdealTree
+52 silly cloneCurrentTree Starting
+53 silly install cloneCurrentTreeToIdealTree
+54 silly cloneCurrentTree Finishing
+55 silly loadShrinkwrap Starting
+56 silly install loadShrinkwrap
+57 silly loadShrinkwrap Finishing
+58 silly loadAllDepsIntoIdealTree Starting
+59 silly install loadAllDepsIntoIdealTree
+60 silly rollbackFailedOptional Starting
+61 silly rollbackFailedOptional Finishing
+62 silly runTopLevelLifecycles Finishing
+63 silly install printInstalled
+64 verbose stack Error: Refusing to install hastur as a dependency of itself
+64 verbose stack     at checkSelf (/usr/lib/node_modules/npm/lib/install/validate-args.js:53:14)
+64 verbose stack     at Array.<anonymous> (/usr/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+64 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+64 verbose stack     at chain (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+64 verbose stack     at /usr/lib/node_modules/npm/lib/install/validate-args.js:16:5
+64 verbose stack     at /usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+64 verbose stack     at Array.forEach (native)
+64 verbose stack     at /usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+64 verbose stack     at Array.forEach (native)
+64 verbose stack     at asyncMap (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:51:8)
+65 verbose cwd /home/joao/www/hastur
+66 error Linux 4.4.0-64-generic
+67 error argv "/usr/bin/nodejs" "/usr/bin/npm" "i" "https://github.com/joaoahmad/hastur" "-S"
+68 error node v6.9.1
+69 error npm  v3.10.8
+70 error code ENOSELF
+71 error Refusing to install hastur as a dependency of itself
+72 error If you need help, you may report this error at:
+72 error     <https://github.com/npm/npm/issues>
+73 verbose exit [ 1, true ]
