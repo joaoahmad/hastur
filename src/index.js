@@ -1,1 +1,4 @@
-console.log('HEY');
+'use strict';
+
+export * from './components';
+// export * from './containers';

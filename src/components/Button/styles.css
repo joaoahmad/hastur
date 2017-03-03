@@ -12,7 +12,7 @@ $blue: #2398FF;
 
 .button{
     border-radius: 2px;
-    font-weight: 700;
+    font-weight: 600;
     border: solid 1px transparent;
     font-size: 12px;
     line-height: 1;
@@ -24,6 +24,7 @@ $blue: #2398FF;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    cursor: pointer;
 
     .icon{
         margin-right: 20px;
@@ -103,8 +104,9 @@ $blue: #2398FF;
     color: #fff;
 
     &:hover:not(.disabled), &:active, &:focus{
-        background-color: color($dark b(2%));
-        border-color: color($dark b(2%));
+        color: #fff;
+        background-color: color($dark b(90%));
+        border-color: color($dark b(90%));
     }
 }
 
@@ -195,8 +197,8 @@ $blue: #2398FF;
 
     &:hover:not(.disabled), &:active, &:focus{
         color: #fff;
-        background-color: color($blue b(2%));
-        border-color: color($blue b(2%));
+        background-color: color($blue b(4%));
+        border-color: color($blue b(4%));
     }
 
     &.disabled{

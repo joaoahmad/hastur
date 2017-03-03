@@ -1,0 +1,39 @@
+:global{
+    body{
+        margin: 0;
+    }
+    html{
+        font-family: helvetica, arial, sans-serif;
+    }
+    *, *::before, *::after {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+    }
+}
+
+.container{
+    width: 1000px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #fff;
+}
+
+.section{
+    &:not(:first-child){
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: solid 1px #f1f1f1;
+    }
+    .sectionHeading{
+        color: #9a9b9c;
+        font-size: 16px;
+        margin: 0 0 20px;
+    }
+}
+
+.gridCell{
+    background: linear-gradient(45deg, #0ea7ff,#22efd0);
+    height: 50px;
+    width: 100%;
+}

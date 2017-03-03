@@ -5,6 +5,7 @@ var app = express();
 
 app.use(express.static(__dirname));
 app.use('/dist', express.static(__dirname + '/../dist'));
+app.use('/examples/dist', express.static(__dirname + '/dist'));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
